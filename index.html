@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Web Developer Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        nav {
+            background-color: #34495e;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        section {
+            padding: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        #about img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 1rem;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background-color: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .project-card img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .project-card a {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        #contact form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        #contact input, #contact textarea {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #contact button {
+            background-color: #3498db;
+            color: white;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #contact button:hover {
+            background-color: #2980b9;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your Name</h1>
+        <p>Web Developer | Crafting Modern & Responsive Websites</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="https://via.placeholder.com/150" alt="Your Photo">
+        <p>Hi, I'm [Your Name], a passionate web developer with experience in building responsive and user-friendly websites. I specialize in front-end and back-end technologies, creating seamless digital experiences.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Project 1</h3>
+                <img src="https://via.placeholder.com/300x200" alt="Project 1">
+                <p>A responsive e-commerce website built with React and Node.js.</p>
+                <a href="https://github.com/your-username/project1">View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <h3>Project 2</h3>
+                <img src="https://via.placeholder.com/300x200" alt="Project 2">
+                <p>A personal blog platform using Next.js and Tailwind CSS.</p>
+                <a href="https://github.com/your-username/project2">View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <h3>Project 3</h3>
+                <img src="https://via.placeholder.com/300x200" alt="Project 3">
+                <p>A task management app with Vue.js and Firebase.</p>
+                <a href="https://github.com/your-username/project3">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>React, Next.js, Vue.js</li>
+            <li>Node.js, Express</li>
+            <li>Git, GitHub</li>
+            <li>Responsive Design, Tailwind CSS</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission (basic example, requires backend for functionality)
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Form submitted! (This is a demo, add backend for full functionality)');
+        });
+    </script>
+</body>
+</html>
